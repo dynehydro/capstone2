@@ -1,0 +1,93 @@
+<?php 
+include 'config.php';
+
+// Fetch all posts
+$query = "SELECT p.post_id, p.post_title, p.post_content, p.created_at, u.username
+          FROM tbl_forum_posts p
+          JOIN tbl_users u ON p.user_id = u.user_id
+          ORDER BY p.created_at DESC";
+$result = $con->query($query);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .post h3 {
+            color: #0079d3;
+            font-size: 20px;
+        }
+
+        .post p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .post .username {
+            font-weight: bold;
+        }
+
+        .create-post-btn {
+            padding: 12px;
+            background-color: #0079d3;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .create-post-btn:hover {
+            background-color: #005f99;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Forum Posts</h2>
+
+        <?php if ($result->num_rows > 0): ?>
+            <?php while($row = $result->fetch_assoc()): ?>
+                <div class="post">
+                    <h3><?php echo htmlspecialchars($row['post_title']); ?></h3>
+                    <p class="username"><?php echo htmlspecialchars($row['username']); ?> - <?php echo $row['created_at']; ?></p>
+                    <p><?php echo nl2br(htmlspecialchars($row['post_content'])); ?></p>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p>No posts available yet.</p>
+        <?php endif; ?>
+
+        <a href="create_post.php" class="create-post-btn">Create a Post</a>
+    </div>
+
+</body>
+</html>

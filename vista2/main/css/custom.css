@@ -1,0 +1,472 @@
+﻿/* NAVBAR ====================================================================================================== */
+
+#wrapnav {
+
+  margin: -0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: black;
+  z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Aligns the links to the right */
+  background-color: black;
+}
+
+#navbar a {
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #0c0c0c; /* Optional hover effect */
+  color: white;
+}
+
+/* BODY ====================================================================================================== */
+
+#wrapper {
+  margin-top: 5%;
+}
+
+#body, html {
+  background-color: #333;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*BUTTONS ===================================================================== */
+
+.button {
+  position: fixed;
+  bottom: 20px;           /* Distance from the bottom of the screen */
+  right: 20px;            /* Distance from the right edge of the screen */
+  background-color: #000; /* Black background */
+  color: #fff;            /* White pen icon color */
+  border: none;
+  border-radius: 50%;     /* Makes the button circular */
+  width: 70px;            /* Set width for a circular shape */
+  height: 70px;           /* Set height for a circular shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2em;
+  transition: background-color 0.3s ease;
+  z-index: 2000;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+
+/* Hover effect */
+.button:hover {
+  background-color: #ff8400; /* Slightly lighter on hover */
+}
+
+/* Optional: Additional styles for the pen icon */
+.button i {
+  margin: 0;
+}
+
+#trash
+{
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  margin-top: 33%;
+  margin-left: 72%;
+  float: right;
+  background-repeat: no-repeat;
+  background-image: url('img/trash.png');
+
+}
+
+#cancel
+{
+margin-left: 80%;
+width: 27px;
+height: 27px;
+background-repeat: no-repeat;
+background-image: url('img/x.png');
+position: absolute;
+}
+
+/* Style for the edit button */
+.edit-button {
+  background-color: #000; /* Black background */
+  color: #fff; /* White pen icon color */
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  width: 45px; /* Set width for a circular shape */
+  height: 45px; /* Set height for a circular shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  margin-left: 25%;
+}
+
+/* Hover effect */
+.edit-button:hover {
+  background-color: #ff8400; /* Slightly lighter on hover */
+}
+
+/* Optional: Additional styles for the pen icon */
+.edit-button i {
+  margin: 0;
+}
+
+
+
+/* FORMS =====================================================================================================*/
+
+#form-block {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #000;
+  padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+#form-block #form-block-half {
+    width: 45%;
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 20px;
+}
+
+#update-block {
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 20px;
+  width: 50%; /* Adjust width as needed */
+  margin: 2%; /* Removes centering margin */
+  position: absolute; /* Optional if you want to fix it to the left */
+  left: 0; /* Aligns to the left side */
+}
+
+#update-block #update-block-half {
+  width: 90%; /* Adjust width as needed to fit layout */
+  background-color: #f2f2f2;
+  color: #000;
+  padding: 20px;
+}
+
+
+/* SEARCH BAR ====================================================================================================== */
+#search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 37%;
+}
+
+#search {
+  padding: 1%;
+  width: 37%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+#clear-button {
+  margin-left: 10px;
+  padding: 8px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* GALLERY ====================================================================================================== */
+.gallery-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 40%;
+  text-decoration: none;
+  margin: auto;
+}
+
+.gallery-image img {
+  width: 200px;
+  height: 150px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.gallery-details a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.gallery-details a:hover {
+  text-decoration: underline;
+}
+
+
+.gallery-details h2 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #000000;
+}
+
+.no-galleries {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.gallery-details p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.gallery-item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#subcontent {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between gallery items */
+}
+
+#artcontent {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between gallery items */
+}
+
+p {
+  line-height: 1.5;
+}
+/* Form Block */
+#form-block {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 80%;
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 1em;
+  color: #333;
+}
+
+.input:focus {
+  border-color: #007BFF;
+  background-color: #fff;
+}
+
+/* Form Row */
+.form-row {
+  margin-bottom: 20px;
+}
+
+
+/* ART PIECES ==============================================================================================*/
+
+#artpieces {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20%;  
+  column-gap: 5%;
+  margin-left: 5%;
+  margin-top: 6%;
+  margin-bottom: 20%;
+  width: 70%
+}
+
+.art-item {
+  width: 100%;
+  height: 120%;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.art-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.art-details h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.art-details p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+
+/* UPDATE DATA ===========================================================================================================*/
+/* Assuming your navbar height is 60px */
+:root {
+  --navbar-height: 60px; /* Set the height of your navbar */
+}
+
+
+#gallery-name
+{
+  font-size: 500%;
+  color: white;
+}
+
+.gallery-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+
+#gallery-bg {
+  margin-bottom: 2%;
+}
+
+#gallery-desc{
+  max-width: 5%;
+}
+
+#gallery-container {
+  width: 50%;          /* Limits the container to 50% of the screen */
+  margin: 0 auto;      /* Centers the container horizontally */
+  left: 0;
+  margin-right: 48%;
+}
+
+#gallery-info {
+    width: 90%;                   /* Limits #gallery-info to 50% of the parent container */
+    margin-left: 5%;              /* Adds some spacing from the left */
+    overflow-wrap: break-word;    /* Ensures long words break to stay within the container */
+    overflow: hidden;             /* Prevents content from spilling outside */
+    text-overflow: ellipsis;      /* Adds ellipsis (...) if text overflows in inline or single-line content */
+}
+
+#gallery-info p {
+    width: 100%;                  /* Ensures paragraphs fit within #gallery-info */
+    margin: 5px 0;
+    font-size: 150%;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;       /* Includes padding in the element’s width */
+    overflow-wrap: break-word;    /* Breaks long words within each paragraph */
+}
+
+
+
+.update-image {
+  position: fixed;  /* Makes the element fixed on the screen */
+  right: 0;         /* Aligns it to the right side */
+  top: 0;           /* Aligns it to the top, so it stays in the upper right */
+  width: 45%;     /* Set a specific width for the image container */
+  height: 100%;     /* Adjusts the height automatically */
+  z-index: 10;      /* Ensures it stays on top of other elements */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the image fills the container without stretching */
+  display: block;
+}
+
+/* NAVIGATION LINKS */
+
+.links
+{
+  text-decoration: none;
+  color: #ff9d00;
+}
+
+#breadcrumb {
+  margin-left: 3%;
+
+  display: flex;
+  align-items: center;
+  font-size: 200%;
+  color: #ffffff;
+}
+
+#breadcrumb a {
+  color: #ffffff; /* Adjust color as needed */
+  text-decoration: none;
+}
+
+#breadcrumb span {
+  margin: 0 5px; /* Space around the separator */
+  color: #909090; /* Adjust separator color */
+}
+
+#breadcrumb a:hover {
+  color: #ff9d00;
+}
+
+
