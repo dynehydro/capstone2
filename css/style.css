@@ -1,0 +1,611 @@
+/* NAVBAR ====================================================================================================== */
+
+#wrapnav {
+
+    margin: -0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 1000; /* Ensures the navbar stays on top */
+  }
+  
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+    background-color: black;
+  }
+  
+  #navbar a {
+    display: block;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #0c0c0c; /* Optional hover effect */
+    color: white;
+  }
+  
+/* hero section  */
+
+.hero-section {
+    padding: 20px;
+    background: #000000;
+}
+
+.hero-section .text-content {
+    margin-top: 150px;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.hero-section p {
+    margin-top: 30px;
+    color: #d1d1d1;
+}
+
+.hero-section button {
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: #ea7d01;
+    height: 50px;
+    width: 170px;
+}
+
+.hero-section button:hover {
+    border: 1px solid #ffffff;
+    background: #000000;
+}
+
+.hero-section button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero-section img {
+    height: 600px;
+    width: 1000px;
+}
+
+/* services section  */
+
+.services-section {
+    padding: 100px;
+    background-color: #fbfbfb;
+}
+
+.services-section .services .row1 {
+    margin-bottom: 40px;
+}
+
+.services-section .services .card {
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 420px; /* Set a fixed height for the cards */
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.services-section .services .card .card-body {
+    padding: 20px;
+    height: 150px; /* Set a fixed height for the card body */
+}
+.services-section .services .card .card-body h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0; /* Changed from 25px to 0 */
+}
+
+.services-section .services .card .card-body p {
+    font-size: 15px;
+    color: #000000;
+    margin-top: 10px; /* Changed from 20px to 10px */
+}
+
+.services-section .services .card img {
+    border-radius: 50%;
+    width: 100%; /* Changed from 80px to 100% */
+    height: auto; /* Changed from 80px to auto */
+    padding: 10px;
+    margin-left: 0; /* Changed from 30px to 0 */
+    margin-top: 20px; /* Changed from 30px to 20px */
+    background: #f0f0f0;
+    object-fit: cover; /* Add this to ensure the image covers the entire height */
+}
+
+.services-section .services .card:hover {
+    background-color: #000000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.services-section .services .card:hover h4 {
+    color: #fff;
+}
+
+.services-section .services .card:hover p {
+    color: #000000;
+}
+
+.services-section .services .card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 25px;
+}
+
+.services-section .services .card p {
+    font-size: 15px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.services-section .text-content {
+    margin-top: 80px;
+}
+
+.services-section .text-content hr {
+    height: 5px;
+    background-color: #333;
+    border: none;
+}
+
+.services-section .text-content h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #572f00;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.services-section .text-content h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: #000000;
+}
+
+.services-section .text-content p {
+    font-size: 17px;
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #000000;
+}
+
+.services-section .text-content button {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #000000;
+    height: 50px;
+    width: 170px;
+}
+
+.services-section .text-content button:hover {
+    background-color: #fff;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+/* Add default text color when the card is not hovered */
+.services-section .services .card .card-body h4 {
+    color: #000; /* Black text by default */
+}
+
+.services-section .services .card .card-body p {
+    color: #000; /* Black text for paragraph by default */
+}
+
+/* Add white text color when the card is hovered */
+.services-section .services .card:hover h4 {
+    color: #fff; /* White text on hover */
+}
+
+.services-section .services .card:hover p {
+    color: #fff; /* White text on hover */
+}
+
+/* Auction animation */
+.auction-animation {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bid-counter {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bid-amount {
+    color: #FFA500;
+}
+
+.bid-increment {
+    color: #000;
+    font-size: 18px;
+}
+
+.bid-timer {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.timer {
+    color: #FFA500;
+}
+
+/* Animation */
+@keyframes auction {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.auction-animation {
+    animation: auction 2s infinite;
+}
+
+/* Hover effect */
+.services-section .services .card:hover {
+    animation: auction 0.5s;
+}
+
+
+/* about section  */
+
+.about-section {
+    padding: 100px;
+}
+
+.about-section img {
+    height: 450px;
+    width: 600px;
+    margin-top: 60px;
+    border-radius: 40px;
+}
+
+.about-section img:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.about-section .text-content h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.about-section .text-content h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: #000000;
+}
+
+.about-section .text-content p {
+    font-size: 17px;
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #555;
+}
+
+.about-section .text-content button {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    border: none;
+    background-color: #000000;
+    height: 50px;
+    width: 170px;
+    text-transform: capitalize;
+}
+
+.about-section .text-content button:hover {
+    background-color: #fff;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+/* project section  */
+
+.project-section {
+    background-color: #000000;
+    padding: 90px;
+    /* height: 100vh; */
+}
+
+.project-section .text h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.project-section .text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFA500;
+    text-transform: capitalize;
+}
+
+.project-section hr {
+    height: 2px;
+    background-color: #f1f1f1;
+    border: none;
+}
+
+.project-section .text p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.project-section .project .card {
+    height: 400px;
+    margin-top: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 30px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.project-section .project .card:hover {
+    transform: scale(1.2);
+}
+
+.project-section .project .card h4 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.project-section .project .card p {
+    font-size: 15px;
+    color: #555;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.project-section .project .card button {
+    margin-top: 10px;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    background-color: #FFA500;
+    height: 40px;
+    width: 120px;
+    text-transform: capitalize;
+}
+
+.project-section .project .card button:hover {
+    background-color: #fff;
+    border: 2px solid #000000;
+    color: #000000;
+}
+.project-section .project .card button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.project-section .project .card button a:hover {
+    color: #000000;
+}
+
+/* contact section  */
+
+.contact-section {
+    background: #fbfbfb;
+    padding: 100px;
+}
+
+.contact-section h1 {
+    margin-top: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 100px;
+}
+
+.contact-section .info-box {
+    background-color: transparent;
+    border: none;
+    height: 200px;
+    width: 230px;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section .info-box .bi {
+    background: #000000;
+    border-radius: 55%;
+    padding: 15px 18px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.contact-section .info-box h3 {
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.contact-section .info-box p {
+    font-size: 15px;
+    color: #777;
+}
+
+.contact-section .info-box:hover {
+    background: #000000;
+    color: #ffa500;
+    transform: scale(0.9);
+}
+
+.contact-section .info-box:hover p {
+    color: #f1f1f1;
+}
+
+.contact-section .info-box:hover .bi {
+    background: #fff;
+    color: #000000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.contact-section .form {
+    margin-top: 50px;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    margin-top: 10px;
+    border: none;
+    background: #f1f1f1;
+    color: #FFA500;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contact-section form button {
+    margin-top: 20px;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    background-color: #000000;
+    height: 50px;
+    width: 170px;
+    text-transform: capitalize;
+}
+
+.contact-section form button:hover {
+    background-color: #fff;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+/* footer section  */
+
+footer {
+    padding: 40px;
+    background: #000000;
+}
+
+footer .logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+footer .logo i {
+    font-size: 25px;
+    background: #000000;
+    border-radius: 50%;
+    padding: 10px 15px;
+}
+
+footer ul li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #d1d1d1;
+    margin-left: 30px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+footer ul li a:hover {
+    color: #FFA500;
+}
+
+footer p {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.back-to-top {
+    background: #FFA500;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+@media (max-width:700px) {
+
+    .hero-section img {
+        height: 350px;
+        margin-top: 50px;
+    }
+
+    .services-section .services .card {
+        margin-bottom: 50px;
+    }
+
+    .services-section .services .row1 {
+        margin-bottom: 0px;
+    }
+
+    .about-section{
+        padding: 50px 30px;
+    }
+    .about-section img {
+        height: 300px;
+    }
+
+    .contact-section{
+        padding: 50px;
+    }
+
+    footer ul li a {
+        margin-left: 5px;
+        letter-spacing: 0;
+    }
+}
